@@ -1,4 +1,6 @@
-# Maptime #9 Leaflet & D3 workshop
+# Maptime Amsterdam #9: Leaflet & D3 workshop
+
+http://maptime-ams.github.io/Leaflet-D3-workshop/
 
 Come code your maps with us at the next Maptime Amsterdam!
 
