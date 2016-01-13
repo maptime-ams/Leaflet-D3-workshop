@@ -28,19 +28,26 @@ For the advanced users, we will have a "show and tell" to discuss current projec
 #Detailed programme:
 18:30 Maptime starts, [De Waag](http://www.waag.org "Institute for art, science and technology"), Nieuwmarkt 4. Open up your laptops
 18:45 Introduction
+
 19:00 Leaflet.js 
+
 	- Making a basic map.
 	- Using layers
 	- Pop-ups, markers and lines.
 	- Inserting GeoJSON
 	- PDOK Mapping Services
+
 19:45 Break
+
 20:00 D3.js 
+
 	- Making a map
 	- Different projections
+
 20:45 Keep working or have a drink!
 
 
 Maptime is BYOB (and food). Tea and coffee is provided, but you're welcome to bring your own beer, drinks, snacks or dinner to the Waag. 
+
 
 Please, if you decide not to go any more, change your RSVP setting so the people on the wait list will get a chance. We are also thinking about doing the workshop again later this year, because of the great enthusiasm! Keep posted on our [Meetup](http://www.meetup.com/Maptime-AMS/)! 
