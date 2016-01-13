@@ -4,7 +4,8 @@ Come code your maps with us at the next Maptime Amsterdam!
 
 The team from Webmapper will provide a workshop to share their hands-on experience in web cartography and geographic web application development.
 
-JavaScript powers most online maps these days. During this evening we'll cover the two primary mapping libraries D3.js and Leaflet.js .
+JavaScript powers most online maps these days. During this evening we'll cover the two primary mapping libraries [D3.js](http://d3js.org/ "Data Driven Documents") and [Leaflet.js](http://leafletjs.com/ "a JavaScript library
+for interactive maps").
 
 We'll start off with an overview of some of the best maps of 2015 made with JavaScript, to give you an insight into the versatility of JavaScript for maps. Followed by a brief introduction of the tools of the trade.
 
@@ -17,15 +18,6 @@ Are you already a seasoned Web developer or geo-specialist well versed in the in
 
 #Programme:
 
-- 18:30 – Maptime starts, Nieuwmarkt 4.
+- 18:30 – Maptime starts, [De Waag](http://www.waag.org "Institute for art, science and technology"), Nieuwmarkt 4.
 
-- Workshop by Webmapper
-
-
-#More information
-
-- www.webmapper.nl
-
-- http://leafletjs.com/
-
-- http://d3js.org/
+- Workshop by [Webmapper](http://www.webmapper.nl "What the map can be")
