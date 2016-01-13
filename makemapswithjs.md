@@ -1,0 +1,46 @@
+# Programme
+
+* 18:30 Maptime starts
+* 18:45 Presentation
+* 19.00 Leaflet.js
+* 19:45 Break
+* 20:00 D3.js
+* 20:45 Keep working or... have a drink!
+
+----
+
+# Webmapper
+
+* What the map can be <!-- .element: class="fragment visible" data-fragment-index="1" -->
+* Baukje, Edward and Hans <!-- .element: class="fragment visible" data-fragment-index="2" -->
+* Based in Utrecht <!-- .element: class="fragment visible" data-fragment-index="3" -->
+* Geographic web application development <!-- .element: class="fragment visible" data-fragment-index="4" -->
+* Web cartography <!-- .element: class="fragment visible" data-fragment-index="5" -->
+* Open source, open data and open standards <!-- .element: class="fragment visible" data-fragment-index="6" -->
+
+----
+
+# Maps in 2015
+
+----
+
+# Leaflet.js
+
+```html
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+```
+
+----
+
+# D3.js
+
+```html
+<script src="//d3js.org/d3.v3.min.js"></script>
+```
+
+----
+
+# It's Maptime!
+
+[http://maptime-ams.github.io/Leaflet-D3-workshop/](http://maptime-ams.github.io/Leaflet-D3-workshop/ "Online presentation")
