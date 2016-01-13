@@ -1,3 +1,22 @@
+# Skip the talk
+
+<table>
+    <tr>
+        <th>Beginners</th>
+        <th>Advanced</th>
+    </tr>
+    <tr>
+        <td>[Introducing Leaflet]()</td>
+        <td>[Leaflet and PDOK]()</td>
+    </tr>
+    <tr>
+        <td>[Introducing D3]()</td>
+        <td>[Maps and charts in D3]()</td>
+    </tr>
+</table>
+
+----
+
 # Programme
 
 * 18:30 Maptime starts
@@ -43,4 +62,17 @@
 
 # It's Maptime!
 
-[http://maptime-ams.github.io/Leaflet-D3-workshop/](http://maptime-ams.github.io/Leaflet-D3-workshop/ "Online presentation")
+<table>
+    <tr>
+        <th>Beginners</th>
+        <th>Advanced</th>
+    </tr>
+    <tr>
+        <td>[Introducing Leaflet]()</td>
+        <td>[Leaflet and PDOK]()</td>
+    </tr>
+    <tr>
+        <td>[Introducing D3]()</td>
+        <td>[Maps and charts in D3]()</td>
+    </tr>
+</table>
