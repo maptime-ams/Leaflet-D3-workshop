@@ -24,8 +24,10 @@ For the advanced users, we will have a "show and tell" to discuss current projec
 
 
 #Detailed programme:
-18:30 Maptime starts, [De Waag](http://www.waag.org "Institute for art, science and technology"), Nieuwmarkt 4. Open up your laptops
-18:45 Introduction
+
+###18:30 Maptime starts, @ [De Waag](http://www.waag.org "Institute for art, science and technology"), Nieuwmarkt 4. Open up your laptops
+
+###18:45 Introduction
 
 ###19:00 Leaflet.js*
 - Making a basic map.
