@@ -3,24 +3,37 @@
  *
  */
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:400,300,700);
+.reveal h1 {
+  font-weight: bold !important; }
+
+a:hover {
+  text-decoration: underline; }
+
+@media only screen and (min-width: 640px) {
+  .sprite.maptime {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    height: 140px;
+    width: 385px;
+    display: inline-block;
+    text-indent: -999em;
+    background: transparent url("../../images/sprite@2x.png") no-repeat scroll 0 0/640px 140px;
+    background-position: 0 0; } }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #f7f2d3;
-  background: -moz-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, #f7f2d3));
-  background: -webkit-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -o-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -ms-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background-color: #f7f3de; }
+  background: #fff;
+  background-color: #fff; }
 
 .reveal {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 36px;
   font-weight: normal;
-  color: #333; }
+  color: #404040; }
 
 ::selection {
   color: #fff;
@@ -206,20 +219,20 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #8b743d;
+  color: #279acb;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #c0a86e;
+  color: #74c3e4;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #564826; }
+  background: #1b698b; }
 
 /*********************************************
  * IMAGES
@@ -227,7 +240,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #333;
+  border: 4px solid #404040;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal section img.plain {
@@ -241,7 +254,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #8b743d;
+  border-color: #279acb;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -249,31 +262,31 @@ body {
  *********************************************/
 .reveal .controls .navigate-left,
 .reveal .controls .navigate-left.enabled {
-  border-right-color: #8b743d; }
+  border-right-color: #279acb; }
 
 .reveal .controls .navigate-right,
 .reveal .controls .navigate-right.enabled {
-  border-left-color: #8b743d; }
+  border-left-color: #279acb; }
 
 .reveal .controls .navigate-up,
 .reveal .controls .navigate-up.enabled {
-  border-bottom-color: #8b743d; }
+  border-bottom-color: #279acb; }
 
 .reveal .controls .navigate-down,
 .reveal .controls .navigate-down.enabled {
-  border-top-color: #8b743d; }
+  border-top-color: #279acb; }
 
 .reveal .controls .navigate-left.enabled:hover {
-  border-right-color: #c0a86e; }
+  border-right-color: #74c3e4; }
 
 .reveal .controls .navigate-right.enabled:hover {
-  border-left-color: #c0a86e; }
+  border-left-color: #74c3e4; }
 
 .reveal .controls .navigate-up.enabled:hover {
-  border-bottom-color: #c0a86e; }
+  border-bottom-color: #74c3e4; }
 
 .reveal .controls .navigate-down.enabled:hover {
-  border-top-color: #c0a86e; }
+  border-top-color: #74c3e4; }
 
 /*********************************************
  * PROGRESS BAR
@@ -282,7 +295,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #8b743d;
+  background: #652E8E;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }

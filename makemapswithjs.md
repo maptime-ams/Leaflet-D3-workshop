@@ -45,10 +45,24 @@
 
 # Leaflet.js
 
+<iframe src="leaflet-demo.html" style="width:100%; height:400px;">
+</iframe>
+
+----
+
+# Leaflet.js
+
 ```html
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 ```
+
+----
+
+#D3.js
+
+<iframe src="d3-demo.html" style="width:100%; height:400px;">
+</iframe>
 
 ----
 
@@ -60,7 +74,7 @@
 
 ----
 
-# It's Maptime!
+# Time for making maps! 
 
 <table>
     <tr>
