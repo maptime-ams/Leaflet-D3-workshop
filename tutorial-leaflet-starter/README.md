@@ -1,34 +1,34 @@
-leaflet
-mijn eigen webmap
+# Leaflet tutorial
+## mijn eigen webmap
 
-leaflet 
+### Leaflet 
 Maak interactieve webmaps voor al je devices. Vladimir Agafonkin maakte het en is een opensource javascript library. Dus gratis en vrij te gebruiken. Weet je al wat van HTML, CSS en JavaScript dan kun je snel aan de slag. Als dit niet gesneden koek voor je is dan kun je met deze tutorial ook al heel goed een start maken.
 
-wat heb je nodig
-beetje kennis van van HTML, CSS, en JavaScript
-teksteditor voor je HTML code, bijv. brackets, sublime text, …
-internettoegang
-browser, chrome heeft een fijne debugger
+### wat heb je nodig
+* beetje kennis van van HTML, CSS, en JavaScript
+* teksteditor voor je HTML code, bijv. brackets, sublime text, …
+* internettoegang
+* browser, chrome heeft een fijne debugger
 
-de eerste kaart
-open je teksteditor 
-start met een basis HTML pagina
-sla deze op in een nieuwe folder en noem deze index.html
+### de eerste kaart
+1. open je teksteditor 
+2. start met een basis HTML pagina
+3. sla op in een nieuwe folder en noem deze index.html
 
 
-<!doctype html>
-<html lang="nl">
-
-<html>
- 	<head>
-		<meta charset="utf-8">
-    		<title>basis HTML</title>  		 
- 	</head>
+    <!doctype html>
+    
+    <html lang="nl">
+        <html>
+ 	    <head>
+		    <meta charset="utf-8">
+    		    <title>basis HTML</title>  		 
+ 	    </head>
        
- 	<body>
-     		<H1>voorbeeld</H1>
- 	</body>
-</html>
+ 	    <body>
+     	    	<H1>voorbeeld</H1>
+ 	    </body>
+    </html>
 
 
 Open http://leafletjs.com/download.html
