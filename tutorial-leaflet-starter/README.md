@@ -1,57 +1,60 @@
-leaflet
-mijn eigen webmap
+# Leaflet tutorial
+## mijn eigen webmap
 
-leaflet 
+### Leaflet 
 Maak interactieve webmaps voor al je devices. Vladimir Agafonkin maakte het en is een opensource javascript library. Dus gratis en vrij te gebruiken. Weet je al wat van HTML, CSS en JavaScript dan kun je snel aan de slag. Als dit niet gesneden koek voor je is dan kun je met deze tutorial ook al heel goed een start maken.
 
-wat heb je nodig
-beetje kennis van van HTML, CSS, en JavaScript
-teksteditor voor je HTML code, bijv. brackets, sublime text, …
-internettoegang
-browser, chrome heeft een fijne debugger
+### wat heb je nodig
+* beetje kennis van van HTML, CSS, en JavaScript
+* teksteditor voor je HTML code, bijv. brackets, sublime text, …
+* internettoegang
+* browser, chrome heeft een fijne debugger
 
-de eerste kaart
-open je teksteditor 
-start met een basis HTML pagina
-sla deze op in een nieuwe folder en noem deze index.html
+### de eerste kaart
+1. open je teksteditor 
+2. start met een basis HTML pagina
+3. sla op in een nieuwe folder en noem deze index.html
 
-
-<!doctype html>
-<html lang="nl">
-
-<html>
- 	<head>
-		<meta charset="utf-8">
-    		<title>basis HTML</title>  		 
- 	</head>
+    ~~~~
+    <!doctype html>
+    
+    <html lang="nl">
+        <html>
+ 	    <head>
+		    <meta charset="utf-8">
+    		    <title>basis HTML</title>  		 
+ 	    </head>
        
- 	<body>
-     		<H1>voorbeeld</H1>
- 	</body>
-</html>
+ 	    <body>
+     	    	<H1>voorbeeld</H1>
+ 	    </body>
+    </html>
+    ~~~~
 
+4. Open http://leafletjs.com/download.html
+5. scroll naar beneden en knip de meeste recente leaflet bibliotheek.
+    ~~~~
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src=“http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    ~~~~
 
-Open http://leafletjs.com/download.html
-scroll naar beneden en knip plak de meeste recente leaflet bibliotheek.
+6. plak de link leaflet.css in de head
+7. plak de leaflet js bibliotheek in de body.  
+    * Vaak zie je dit ook in de <head> staan. Het is sneller als je het juist zo ver mogelijk onderaan doet. 
+    
+8. Open een nieuw bestand. Noem het bestand bijvoorbeeld ‘ main.css’ en plaats het in een nieuwe map: ‘style’ in dezelfde folder als je index.html. 
+9. Je kunt evt. ook gelijk mappen aanmaken voor:  ‘images’  en ‘ js’. 
+10. Open je ‘index.html’ bestand en zet de link naar je css bestand in je head
 
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-<script src=“http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    ~~~~
+    <link rel="stylesheet" href=“style/main.css”/>
+    ~~~~
 
-
-Zet de <link….leaflet.css”/> in de <head>
-zet de De leaflet bibliotheek <script…..leaflet.js”/> in de body.  Vaak zie je dit ook in de <head> staan. Het is sneller als je het juist zo ver mogelijk onderaan doet. 
-Open een nieuw bestand. Noem bestand bijvoorbeeld ‘ main.css’  en plaats het in een nieuwe map: ‘style’ in dezelfde folder als je index.html. 
-Je kunt evt. ook gelijk mappen aanmaken voor:  ‘images’  en ‘ js’. 
-Open je ‘index.html’ bestand en zet de link naar je css bestand in je <head> : 
-
-<link rel="stylesheet" href=“style/main.css”/>
-
-verander de titel in bijv. “mijn eerste kaart met leaflet”
-
-Zet een ‘div’  in de <body>:  
-
+11. verander de titel in bijv. “mijn eerste kaart met leaflet”
+12. Zet een ‘div’  in de body  
+    ~~~~
 	<div id=“map”></div>
-
+    ~~~~
 de basis is klaar! Geef je “map” altijd een hoogte (en evt breedte). Dit doe je in de main.css
 
 	#map { height: 300px; width:100%;} 
