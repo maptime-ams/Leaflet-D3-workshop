@@ -6,12 +6,12 @@
         <th>Advanced</th>
     </tr>
     <tr>
-        <td>[Introducing Leaflet]()</td>
-        <td>[Leaflet and PDOK]()</td>
+        <td>[Introducing Leaflet](tutorial-leaflet-starter/README.md)</td>
+        <td>[Leaflet and PDOK](tutorial-leaflet-advanced/README.md)</td>
     </tr>
     <tr>
-        <td>[Introducing D3]()</td>
-        <td>[Maps and charts in D3]()</td>
+        <td>[Introducing D3](tutorial-d3-starter/README.md)</td>
+        <td>[Maps and charts in D3](tutorial-d3-advanced/README.md)</td>
     </tr>
 </table>
 
@@ -82,11 +82,11 @@
         <th>Advanced</th>
     </tr>
     <tr>
-        <td>[Introducing Leaflet]()</td>
-        <td>[Leaflet and PDOK]()</td>
+        <td>[Introducing Leaflet](tutorial-leaflet-starter/README.md)</td>
+        <td>[Leaflet and PDOK](tutorial-leaflet-advanced/README.md)</td>
     </tr>
     <tr>
-        <td>[Introducing D3]()</td>
-        <td>[Maps and charts in D3]()</td>
+        <td>[Introducing D3](tutorial-d3-starter/README.md)</td>
+        <td>[Maps and charts in D3](tutorial-d3-advanced/README.md)</td>
     </tr>
 </table>
