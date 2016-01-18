@@ -45,7 +45,7 @@
 
 # Leaflet.js
 
-<iframe src="leaflet-demo.html" style="width:100%; height:400px;">
+<iframe src="presentation/leaflet-demo.html" style="width:100%; height:400px;">
 </iframe>
 
 ----
@@ -61,7 +61,7 @@
 
 #D3.js
 
-<iframe src="d3-demo.html" style="width:100%; height:400px;">
+<iframe src="presentation/d3-demo.html" style="width:100%; height:400px;">
 </iframe>
 
 ----
