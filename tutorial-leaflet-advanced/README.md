@@ -86,7 +86,9 @@ var url = 'https://geodata.nationaalgeoregister.nl/wijkenbuurten2014/ows?';
 
 Leaflet expects objects as GeoJSON. Its coordinates have to be in WGS-84 (EPSG:4326): These parameters are identical for all GeoJSON-requests:
 
+````javascript
 var params = 'service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&srsName=EPSG:4326&';
+````
 
 Then we set the name of the layer that contains the neighbourhoods and specify the attributes we would like to use for our map and we filter out just the neighbourhoods of Amsterdam:
 
