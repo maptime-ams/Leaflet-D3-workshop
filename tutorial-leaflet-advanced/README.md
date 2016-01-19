@@ -10,14 +10,14 @@ There is one caveat: maps from Google, Bing, OpenStreetMap come in the [Web Merc
 
 For this tutorial, we will be using [Leaflet.js 1.0.0 beta 2](http://mourner.github.io/Leaflet/reference.html):
 
-````javascript
+````html
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.css" />
 <script src="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.js"></script>
 ````
 
 ### Simply add a map image from PDOK
 
-The Open Geospatial Consortium (OGC) has created the [Web Mapping Service](https://en.wikipedia.org/wiki/Web_Map_Service) (WMS) recommendation to standardise the retrieval of geographically referenced images. Most data sets from PDOK are available as a WMS service. To get a sense of the range of services, you can browse the [Nationaal Georegister](http://www.nationaalgeoregister.nl/). For this tutorial we'll add a map of the number of cars per household for each neighbourhood.
+The Open Geospatial Consortium (OGC) has created the [Web Mapping Service](https://en.wikipedia.org/wiki/Web_Map_Service) (WMS) protocol for the retrieval of geographically referenced images. Most data sets from PDOK are available as a WMS service. To get a sense of the range of services, you can browse the [Nationaal Georegister](http://www.nationaalgeoregister.nl/). For this tutorial we'll add a map of the number of cars per household for each neighbourhood.
 
 ````javascript
 var cbs_cars = L.tileLayer.wms('http://geodata.nationaalgeoregister.nl/wijkenbuurten2014/wms', {
@@ -37,4 +37,18 @@ Leaflet calculates the coordinates of the bounding box at each zoom level to sup
 
 [Full demo](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/1/).
 
-Try and add images for the height data to your map. You can search the Nationaal Georegister website for the `AHN` to find the proper service endpoint.
+Try and add images for the elevation data to your map. You can search the Nationaal Georegister website using the term `AHN` to find the appropriate service endpoint.
+
+### One large map instead of many smaller ones
+
+Using the WMS protocol, each map image is generated just for you there and then. The mapping engine finds the data for the area you are looking at and applies the cartographic styles before sending back the image. In case many people are using your online mapping application, you can reduce the load on the mapping service by requesting one large image instead of many smaller ones.
+
+Leaflet focuses on serving small map tiles, but fortunately there is the [Leaflet WMS](https://github.com/heigeo/leaflet.wms) plugin to retrieve large map images that follow the same WMS protocol. Pull in the plugin from Github through Rawgit to have it served with the proper HTTP headers so Web browsers understand that it is JavaScript:
+
+````html
+<script src=“https://cdn.rawgit.com/heigeo/leaflet.wms/gh-pages/leaflet.wms.js"></script>
+````
+
+
+
+[Full demo](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/2/).
