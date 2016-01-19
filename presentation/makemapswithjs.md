@@ -11,7 +11,7 @@
     </tr>
     <tr>
         <td>[Introducing D3](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-d3-starter/README.md)</td>
-        <td>[Maps and charts in D3](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-d3-advanced/README.md)</td>
+        <td>[Arcs, nodes and promises](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-d3-advanced/README.md)</td>
     </tr>
 </table>
 
@@ -191,6 +191,6 @@ Contribute on [GitHub](https://github.com/mbostock/d3), Follow on [Twitter](http
     </tr>
     <tr>
         <td>[Introducing D3](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-d3-starter/README.md)</td>
-        <td>[Maps and charts in D3](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-d3-advanced/README.md)</td>
+        <td>[Arcs, nodes and promises](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-d3-advanced/README.md)</td>
     </tr>
 </table>
