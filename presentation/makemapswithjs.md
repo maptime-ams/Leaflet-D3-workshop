@@ -6,12 +6,12 @@
         <th>Advanced</th>
     </tr>
     <tr>
-        <td>[Introducing Leaflet](http://github.com/maptime-ams/Leaflet-D3-workshop/tutorial-leaflet-starter/README.md)</td>
-        <td>[Leaflet and PDOK](http://github.com/maptime-ams/Leaflet-D3-workshop/tutorial-leaflet-advanced/README.md)</td>
+        <td>[Introducing Leaflet](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-leaflet-starter/README.md)</td>
+        <td>[Leaflet and PDOK](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-leaflet-advanced/README.md)</td>
     </tr>
     <tr>
-        <td>[Introducing D3](http://github.com/maptime-ams/Leaflet-D3-workshop/tutorial-d3-starter/README.md)</td>
-        <td>[Maps and charts in D3](http://github.com/maptime-ams/Leaflet-D3-workshop/tutorial-d3-advanced/README.md)</td>
+        <td>[Introducing D3](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-d3-starter/README.md)</td>
+        <td>[Maps and charts in D3](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-d3-advanced/README.md)</td>
     </tr>
 </table>
 
@@ -186,11 +186,11 @@ Contribute on [GitHub](https://github.com/mbostock/d3), Follow on [Twitter](http
         <th>Advanced</th>
     </tr>
     <tr>
-        <td>[Introducing Leaflet](http://github.com/maptime-ams/Leaflet-D3-workshop/tutorial-leaflet-starter/README.md)</td>
-        <td>[Leaflet and PDOK](http://github.com/maptime-ams/Leaflet-D3-workshop/tutorial-leaflet-advanced/README.md)</td>
+        <td>[Introducing Leaflet](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-leaflet-starter/README.md)</td>
+        <td>[Leaflet and PDOK](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-leaflet-advanced/README.md)</td>
     </tr>
     <tr>
-        <td>[Introducing D3](http://github.com/maptime-ams/Leaflet-D3-workshop/tutorial-d3-starter/README.md)</td>
-        <td>[Maps and charts in D3](http://github.com/maptime-ams/Leaflet-D3-workshop/tutorial-d3-advanced/README.md)</td>
+        <td>[Introducing D3](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-d3-starter/README.md)</td>
+        <td>[Maps and charts in D3](http://github.com/maptime-ams/Leaflet-D3-workshop/blob/gh-pages/tutorial-d3-advanced/README.md)</td>
     </tr>
 </table>
