@@ -86,6 +86,7 @@ Maak interactieve webmaps voor al je devices. Vladimir Agafonkin maakte het en i
 	~~~~
 
 ###Baselayer	
+
 Voor de echte kaart heb je een baselayer nodig. Dit is je ondergrond kaart. Deze is opgebouwd uit tegels, dat laadt lekker snel. 
 
 1. Neem het script over en plaats in de body
