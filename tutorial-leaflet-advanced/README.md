@@ -35,6 +35,6 @@ var cbs_cars = L.tileLayer.wms('http://geodata.nationaalgeoregister.nl/wijkenbuu
 
 Leaflet calculates the coordinates of the bounding box at each zoom level to supply with the request. Also, Leaflet sets the default width and height to be 256 pixels. Finally, Leaflet uses the default Web Mercator projection in its requests. See how all tiles appear as you load the map in your Web browser. For the full WMS requests, use your favorite debugging tools.
 
-[Full demo](http://maptime-ams.github.io/maptime-ams/Leaflet-D3-workshop/tutorial-leaflet-advanced/1/).
+[Full demo](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/1/).
 
 Try and add images for the height data to your map. You can search the Nationaal Georegister website for the `AHN` to find the proper service endpoint.
