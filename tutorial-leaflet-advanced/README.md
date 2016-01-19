@@ -15,7 +15,7 @@ For this tutorial, we will be using [Leaflet.js 1.0.0 beta 2](http://mourner.git
 <script src="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.js"></script>
 ````
 
-### Simply add a map image from PDOK
+### Step 1: Simply add a map image from PDOK
 
 The Open Geospatial Consortium (OGC) has created the [Web Mapping Service](https://en.wikipedia.org/wiki/Web_Map_Service) (WMS) protocol for the retrieval of geographically referenced images. Most data sets from PDOK are available as a WMS service. To get a sense of the range of services, you can browse the [Nationaal Georegister](http://www.nationaalgeoregister.nl/). For this tutorial we'll add a map of the number of cars per household for each neighbourhood.
 
@@ -39,7 +39,7 @@ Leaflet calculates the coordinates of the bounding box at each zoom level to sup
 
 Try and add images for the elevation data to your map. You can search the Nationaal Georegister website using the term `AHN` to find the appropriate service endpoint.
 
-### One large map instead of many smaller ones
+### Step 2: One large map instead of many smaller ones
 
 Using the WMS protocol, each map image is generated just for you there and then. The mapping engine finds the data for the area you are looking at and applies the cartographic styles before sending back the image. In case many people are using your online mapping application, you can reduce the load on the mapping service by requesting one large image instead of many smaller ones.
 
@@ -52,7 +52,7 @@ Leaflet focuses on serving small map tiles, but fortunately there is the [Leafle
 For this step, we'll add a map of the number of cars per household for each neighbourhood again, but use one large image instead:
 
 ````javascript
-var cbs_cars = L.WMS.overlay("http://geodata.nationaalgeoregister.nl/wijkenbuurten2013/ows", {
+var cbs_cars = L.WMS.overlay('http://geodata.nationaalgeoregister.nl/wijkenbuurten2014/wms', {
     'layers': 'cbs_buurten_2014',
     'styles': 'wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden',
     'format': 'image/png',
@@ -62,3 +62,78 @@ var cbs_cars = L.WMS.overlay("http://geodata.nationaalgeoregister.nl/wijkenbuurt
 Check which application appears to be more responsive: multiple small map images or one large map image?
 
 [Full demo 2](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/2/).
+
+### Step 3: Change the map style
+
+Until now, we have requested map images from PDOK. Another type of geographic web services allows you to request geographic objects using the [WFS](https://en.wikipedia.org/wiki/Web_Feature_Service) protocol. The default response from a WFS service formulates the data as GML, an XML format. Fortunately, there is also the option to request the objects as GeoJSON, another data format that Leaflet does understand. Thus, you can apply a map style to the geographic objects in your online mapping application.
+
+First, add a GeoJSON layer to your map and define custom functions to add cartographic styles and map interaction:
+
+````javascript
+var geojson = L.geoJson(null,
+    {
+        style: getStyle
+        onEachFeature: onEachFeature
+    }
+).addTo(map);
+````
+
+Then, you set up the WFS endpoint for the neighbourhood map of 2014 from CBS:
+
+````javascript
+var url = 'https://geodata.nationaalgeoregister.nl/wijkenbuurten2014/ows?';
+````
+
+Leaflet expects objects as GeoJSON. Its coordinates have to be in WGS-84 (EPSG:4326): These parameters are identical for all GeoJSON-requests:
+
+var params = 'service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&srsName=EPSG:4326&';
+
+Then we set the name of the layer that contains the neighbourhoods and specify the attributes we would like to use for our map and we filter out just the neighbourhoods of Amsterdam:
+
+````javascript
+params += 'typeName=wijkenbuurten2014:cbs_buurten_2014&';
+params += 'propertyName=gemeentecode,personenautos_per_huishouden,geom&';
+params += 'cql_filter=gemeentenaam \= \'Amsterdam\'';
+````
+
+We have defined a custom function to specify the cartographic style. We set up some basic look and feel first and vary the colour of each neighbourhood depending on the number of cars per household:
+
+````javascript
+function getStyle(features) {
+    var rate = features.properties.personenautos_per_huishouden;
+    return {
+            color: '#fff',
+            fillColor: getColour(rate),
+            weight: 0.8,
+            opacity: 1,
+            fillOpacity: 0.9
+        }
+}
+````
+
+Need some colour inspiration? Check out [ColorBrewer](http://colorbrewer2.org/). Fortunately, the various colour ranges have been incorporated into [Chroma.js](), a tiny JavaScript library for dealing with colours!
+
+````html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.1.1/chroma.min.js"></script>
+````
+
+Let's set the colours using the [YlOrBr](http://colorbrewer2.org/?type=sequential&scheme=YlOrBr&n=8) colour range:
+
+````javascript
+function getColour(d) {
+    var colour,
+    colorScale = chroma
+        .scale('YlOrBr')
+        .domain([0,1.5]);
+    if (d < 0) {
+        colour = '#eee'
+    } else {
+        colour = colorScale(d).hex()
+    }
+    return colour;
+}
+````
+
+See the source code of the demo to find out how the cartographic style changes based on mouse interaction!
+
+[Full demo 3](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/3/).
