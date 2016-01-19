@@ -46,7 +46,7 @@ Using the WMS protocol, each map image is generated just for you there and then.
 Leaflet focuses on serving small map tiles, but fortunately there is the [Leaflet WMS](https://github.com/heigeo/leaflet.wms) plugin to retrieve large map images that follow the same WMS protocol. Pull in the plugin from Github through Rawgit to have it served with the proper HTTP headers so Web browsers understand that it is JavaScript:
 
 ````html
-<script src=“https://cdn.rawgit.com/heigeo/leaflet.wms/gh-pages/leaflet.wms.js"></script>
+<script src="https://cdn.rawgit.com/heigeo/leaflet.wms/gh-pages/leaflet.wms.js"></script>
 ````
 
 
