@@ -170,8 +170,7 @@ new L.TileLayer('http://geodata.nationaalgeoregister.nl/tms/1.0.0/brtachtergrond
     minZoom: 0,
     maxZoom: 13,
     tms: true,
-    attribution: 'Map data: <a href="http://www.kadaster.nl">Kadaster</a>',
-    errorTileUrl: 'http://www.webmapper.net/theme/img/missing-tile.png', // plaatje als tegels niet worden gevonden...
+    attribution: 'Map data: <a href="http://www.kadaster.nl">Kadaster</a>'
 }).addTo(map);
 ````
 
