@@ -1,16 +1,16 @@
-#leaflet tutorial
-##mijn eigen webmap
+# leaflet tutorial
+## mijn eigen webmap
 
-###leaflet 
+### leaflet 
 Maak interactieve webmaps voor al je devices. Vladimir Agafonkin maakte het en is een opensource javascript library. Dus gratis en vrij te gebruiken. Weet je al wat van HTML, CSS en JavaScript dan kun je snel aan de slag. Als dit niet gesneden koek voor je is dan kun je met deze tutorial ook al heel goed een start maken.
 
-###wat heb je nodig
+### wat heb je nodig
 * beetje kennis van van HTML, CSS, en JavaScript
 * teksteditor voor je HTML code, bijv. brackets, sublime text
 * internettoegang
 * browser, chrome heeft een fijne debugger
 
-###de eerste kaart
+### de eerste kaart
 1. open je teksteditor 
 2. start met een basis HTML pagina
 3. sla deze op in een nieuwe folder en noem deze index.html
@@ -46,7 +46,7 @@ Maak interactieve webmaps voor al je devices. Vladimir Agafonkin maakte het en i
 
 8. Open een nieuw bestand. Noem bestand bijvoorbeeld ‘ main.css’  en plaats het in een nieuwe map: ‘style’ in dezelfde folder als je index.html. 
 9. Je kunt evt. ook gelijk mappen aanmaken voor:  ‘images’  en ‘ js’. 
-10. Open je ‘index.html’ bestand en zet de link naar je css bestand in je <head> : 
+10. Open je ‘index.html’ bestand en zet de link naar je css bestand in je head
 
 	~~~~
 	<link rel="stylesheet" href=“style/main.css”/>
@@ -85,7 +85,7 @@ Maak interactieve webmaps voor al je devices. Vladimir Agafonkin maakte het en i
 	</html>
 	~~~~
 
-###Baselayer	
+### Baselayer	
 
 Voor de echte kaart heb je een baselayer nodig. Dit is je ondergrond kaart. Deze is opgebouwd uit tegels, dat laadt lekker snel. 
 
@@ -129,7 +129,7 @@ http://www.mapcoordinates.net/en
 5. Oefen met verschillende tegels, coordinaten en zoomlevels en maak zo je eigen basiskaart.
 
 
-###markers, cirkels en polygonen
+### markers, cirkels en polygonen
 voeg handmatig markers, cirkels en polygonen toe (je eigen woonplaats bijv.). Kies in ieder geval coordinaten die op je kaart liggen.
 
 1. Zet het volgende binnen het script
@@ -232,7 +232,7 @@ voeg handmatig markers, cirkels en polygonen toe (je eigen woonplaats bijv.). Ki
 	</script>
 	~~~~
 
-###geoJson-tilelayer
+### geoJson-tilelayer
 geoJson is de standaard qua data type om webmaps mee te maken. Deze data kun je als kaartlaag toevoegen. 
 
 * Meer weten over geoJson lees je hier https://en.wikipedia.org/wiki/GeoJSON
@@ -270,7 +270,7 @@ geoJson is de standaard qua data type om webmaps mee te maken. Deze data kun je 
 		xhr.send();   
 	~~~~
 	           
-###tips			
+### tips			
 * leer de basics van HTML, javascript bij codecademy: https://www.codecademy.com/learn/web
 * wil je een speciaal font gebruiken? check ‘google fonts’
 * leuke opdracht vind je hier http://maptimeboston.github.io/leaflet-intro/
