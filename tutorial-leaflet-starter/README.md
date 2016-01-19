@@ -55,66 +55,67 @@ Maak interactieve webmaps voor al je devices. Vladimir Agafonkin maakte het en i
     ~~~~
 	<div id=“map”></div>
     ~~~~
-de basis is klaar! Geef je “map” altijd een hoogte (en evt breedte). Dit doe je in de main.css
+
+13. de basis is klaar! Geef je “map” altijd een hoogte (en evt breedte). Dit doe je in de main.css
 
 	#map { height: 300px; width:100%;} 
  
-speel met de aantal px en/of % tot je een mapformaat hebt wat je goed vindt.
-
-
-<!doctype html>
-<html lang="nl">
-
-<html>
- 	<head>
-		<meta charset="utf-8">
-    		<title>Mijn eerste kaart met Leaflet</title>  
-		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-		<link rel="stylesheet" href="style/main.css"/>
-	</head>
+14. speel met de aantal px en/of % tot je een mapformaat hebt wat je goed vindt.
+    ~~~~
+    <!doctype html>
+    <html lang="nl">
+    
+    <html>
+ 	    <head>
+		    <meta charset="utf-8">
+    		    <title>Mijn eerste kaart met Leaflet</title>  
+		    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+		    <link rel="stylesheet" href="style/main.css"/>
+	    </head>
        
- 	<body>
-     		<H1>voorbeeld</H1>
-		<div id=“map”></div>
-		<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script> 
- 	</body>
-</html>
+ 	    <body>
+     		    <H1>voorbeeld</H1>
+		    <div id=“map”></div>
+		    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script> 
+ 	    </body>
+    </html>
+    ~~~~
 
+### baselayer
 Voor de echte kaart heb je een baselayer nodig. Dit is je ondergrond kaart. Deze is opgebouwd uit tegels, dat laadt lekker snel. 
 Neem het <script>…..</script> over
 
+    ~~~~
+    <!doctype html>
 
-<!doctype html>
-
-<html>
- 	<head>
-    		<title>basis HTML</title>  
-		 <link rel="stylesheet" href="style/main.css"/>
-		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+        <html>
+ 	        <head>
+    		    <title>basis HTML</title>  
+		    <link rel="stylesheet" href="style/main.css"/>
+		    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
    		
-	 
- 	</head>
+ 	        </head>
        
- 	<body>
-     		<H1>voorbeeld</H1>
-		<div id=“map”></div>
-<script>
-//initialize the map         
-var map = L.map('map').setView([52.18, 5.5308], 11);
+ 	        <body>
+     	    	<H1>voorbeeld</H1>
+		        <div id=“map”></div>
+        <script>
+        //initialize the map         
+        var map = L.map('map').setView([52.18, 5.5308], 11);
          
-//maak een baselayer - tegels         
-var achtergrondkaart = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-    maxZoom: 19
-});
+        //maak een baselayer - tegels         
+        var achtergrondkaart = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+        attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+        maxZoom: 19
+        });
           
-achtergrondkaart.addTo(map);
-</script>
+        achtergrondkaart.addTo(map);
+        </script>
            <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script> 
 
- 	</body>
-</html>
-
+ 	    </body>
+        </html>
+    ~~~~
 
 Je hebt nu een kaart gemaakt.
 	var map =  L.map(“map” ): is het initialiseren van een “map” variabele
