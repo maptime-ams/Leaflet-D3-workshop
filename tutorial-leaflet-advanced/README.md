@@ -84,7 +84,7 @@ Then, you set up the WFS endpoint for the neighbourhood map of 2014 from CBS:
 var url = 'https://geodata.nationaalgeoregister.nl/wijkenbuurten2014/ows?';
 ````
 
-Leaflet expects objects as GeoJSON. Its coordinates have to be in WGS-84 (EPSG:4326): These parameters are identical for all GeoJSON-requests:
+Leaflet expects objects as GeoJSON. Its coordinates have to be in WGS-84 (EPSG:4326), so make sure to state the projection explicitly. Otherwise you'll end up with coordinates in the Amersfoort New projection:
 
 ````javascript
 var params = 'service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&srsName=EPSG:4326&';
@@ -139,3 +139,51 @@ function getColour(d) {
 See the source code of the demo to find out how the cartographic style changes based on mouse interaction!
 
 [Full demo 3](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/3/).
+
+### Step 4: Add a reference map from PDOK in Leaflet
+
+In the previous steps, each map image or geographic object was created just for you, right there and then. This is great in case the underlying data set changes regularly. You are assured to get the latest, most recent data. For a reference map, the update cycles are longer and map images can be created in advance. That is what map tiles are for. Leaflet is made primarily just for that: pulling in map tiles.
+
+However, we already mentioned this caveat: the geographic web services from PDOK come in the Amersfoort New projection by default, whereas Leaflet expects map tiles in the Web Mercator projection. Furthermore, the zoom levels for the [Dutch tiling scheme](http://www.geonovum.nl/sites/default/files/nederlandse_richtlijn_tiling_-_versie_1.1.pdf) are at different map scales. So, we need some extra plugins to do the heavy lifting for us, Proj4js and Proj4Leaflet:
+
+````html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.12/proj4.js"></script>
+<script src="https://cdn.rawgit.com/kartena/Proj4Leaflet/leaflet-proj-refactor/src/proj4leaflet.js"></script>
+````
+
+Now, we can define the projection and the Dutch tiling scheme:
+
+````javascript
+var RD = new L.Proj.CRS( 'EPSG:28992','+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +towgs84=565.2369,50.0087,465.658,-0.406857330322398,0.350732676542563,-1.8703473836068,4.0812 +no_defs',
+    {
+        resolutions: [3440.640, 1720.320, 860.160, 430.080, 215.040, 107.520, 53.760, 26.880, 13.440, 6.720, 3.360, 1.680, 0.840, 0.420, 0.210],
+        bounds: L.bounds([-285401.92, 22598.08], [595401.9199999999, 903401.9199999999]),
+        origin: [-285401.92, 22598.08]
+    }
+);
+````
+
+We're all set to add the reference map _BRT Achtergrondkaart_ from PDOK using the TMS protocol:
+
+````javascript
+new L.TileLayer('http://geodata.nationaalgeoregister.nl/tms/1.0.0/brtachtergrondkaart/{z}/{x}/{y}.png', {
+    minZoom: 0,
+    maxZoom: 13,
+    tms: true,
+    attribution: 'Map data: <a href="http://www.kadaster.nl">Kadaster</a>',
+    errorTileUrl: 'http://www.webmapper.net/theme/img/missing-tile.png', // plaatje als tegels niet worden gevonden...
+}).addTo(map);
+````
+
+Can you mix and match from the previous steps to add map images or geographic objects on top of the reference map tiles? Don't forget to explicitly set the projection in case you are requesting map images using the WMS protocol:
+
+````javascript
+var cbs_cars = L.WMS.overlay('http://geodata.nationaalgeoregister.nl/wijkenbuurten2014/wms', {
+    'layers': 'cbs_buurten_2014',
+    'styles': 'wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden',
+    'srs': 'EPSG:28992'
+    'format': 'image/png',
+}).addTo(map);
+````
+
+[Full demo 4](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/4/).
