@@ -35,7 +35,7 @@ var cbs_cars = L.tileLayer.wms('http://geodata.nationaalgeoregister.nl/wijkenbuu
 
 Leaflet calculates the coordinates of the bounding box at each zoom level to supply with the request. Also, Leaflet sets the default width and height to be 256 pixels. Finally, Leaflet uses the default Web Mercator projection in its requests. See how all tiles appear as you load the map in your Web browser. For the full WMS requests, use your favorite debugging tools.
 
-[Full demo](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/1/).
+[Full demo 1](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/1/).
 
 Try and add images for the elevation data to your map. You can search the Nationaal Georegister website using the term `AHN` to find the appropriate service endpoint.
 
@@ -49,6 +49,16 @@ Leaflet focuses on serving small map tiles, but fortunately there is the [Leafle
 <script src="https://cdn.rawgit.com/heigeo/leaflet.wms/gh-pages/leaflet.wms.js"></script>
 ````
 
+For this step, we'll add a map of the number of cars per household for each neighbourhood again, but use one large image instead:
 
+````javascript
+var cbs_cars = L.WMS.overlay("http://geodata.nationaalgeoregister.nl/wijkenbuurten2013/ows", {
+    'layers': 'cbs_buurten_2014',
+    'styles': 'wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden',
+    'format': 'image/png',
+}).addTo(map);
+````
 
-[Full demo](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/2/).
+Check which application appears to be more responsive: multiple small map images or one large map image?
+
+[Full demo 2](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/2/).
