@@ -1,0 +1,16 @@
+body {font-family: 'Poiret One', cursive;}
+h1 { font-family: 'Poiret One', Arial, cursive; font-weight: 400; }
+
+        #map{ 
+            height: 400px ;
+            width: 50%;
+            }
+        
+
+body {
+				background-color: gray;
+			}
+
+			svg {
+				background-color: white;
+			}
