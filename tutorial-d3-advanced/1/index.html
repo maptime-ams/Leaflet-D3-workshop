@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>D3 demo &mdash; Maptime AMS #9</title>
+        <meta name="description" content="D3 demo">
+        <meta name="author" content="Edward Mac Gillavry">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="D3-demo">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <link rel="shortcut icon" href="images/favicon.png">
+        <style>
+            body {
+                width: 100%;
+                height: 400px;
+                margin: 0;
+                padding: 0;
+            }
+            svg {
+                background-color: #fdfdfd;
+            }
+            .neighbourhoods {
+                fill: #ccc;
+                stroke: #f00;
+                stroke-width: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script>
+            var width = 910,
+            height = 400;
+            var projection = d3.geo.mercator()
+                .scale(75000)
+                .translate([width / 2, height / 2])
+                .center([4.9,52.36]);
+            var path = d3.geo.path()
+                .projection(projection);
+            var svg = d3.select("body").append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            d3.json("neighbourhoods-pdok.geojson", function (json) {
+
+                    svg.append("g")
+                    .attr("class", "neighbourhoods")
+                    .selectAll("path")
+                    .data(json.features)
+                    .enter().append("path")
+                    .attr("d", path)
+                    .append("title")
+                    .text(function(d) { 
+                            return d.properties.name
+                    });
+            });
+            d3.select(self.frameElement).style("height", height + "px");
+        </script>
+    </body>
+</html>
