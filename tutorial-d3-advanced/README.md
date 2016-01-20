@@ -47,4 +47,16 @@ In QGIS, you open the GeoJSON file _neighbourhoods-pdok.geojson_ as a vector lay
 
 [Full demo 2](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-d3-advanced/2/).
 
-### About geometry and topology
+### Step 3: about geometry and topology
+
+Neighhourhoods share a lot of boundaries. So why store every boundary twice, i.e. for every neighbourhood? Furthermore, coordinates in longitude and latitude are floating point values. It's much easier for computers to deal with integers instead. This is what [TopoJSON](https://github.com/mbostock/topojson) is all about: coordinates are transformed to integers and only the topological structure (its nodes and arcs) are stored. Also, it keeps track which arcs together make up a polygon. Finally, you can add a little line generalisation.
+
+You can either [install TopoJSON](https://github.com/mbostock/topojson/wiki/Installation) and run it as a command line tool, or you can use online translators to create your own TopoJSON files. A favourite of ours is [MapShaper](http://www.mapshaper.org/) as you can interactively adjust the line generalisation. Using the command line, we were able to reduce the filesize from 351K down to only 22K!
+
+````
+topojson --id-property buurtcode -p name=buurtnaam -q 1e5 -s 0.000000001 -o neighbourhoods.topojson neighbourhoods.geojson
+````
+
+Fair enough, we did indeed cut some corners here and there in the process. So, don't settle any border disputes based on the TopoJSON file, but for online mapping it does the job!
+
+[Full demo 3](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-d3-advanced/3/).
