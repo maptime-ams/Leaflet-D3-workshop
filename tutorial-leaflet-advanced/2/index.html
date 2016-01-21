@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Tiled WMS in Leaflet</title>
+    <title>Single WMS in Leaflet</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="author" content="Edward Mac Gillavry">
@@ -21,6 +21,7 @@
     <body>
         <div id="map-canvas"></div>
         <script src="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.js"></script>
+        <script src="https://cdn.rawgit.com/heigeo/leaflet.wms/gh-pages/leaflet.wms.js"></script>
         <script>
             var map = new L.Map('map-canvas', {
                 center: [52.37,4.9],
@@ -32,11 +33,10 @@
                 subdomains: 'abcd',
             }).addTo(map);
 
-            var cbs_cars = L.tileLayer.wms('http://geodata.nationaalgeoregister.nl/wijkenbuurten2014/wms', {
-                layers: 'cbs_buurten_2014',
-                styles: 'wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden',
-                format: 'image/png',
-                attribution: '<a href="http://www.cbs.nl/">Centraal Bureau voor de Statistiek</a>',
+            var cbs_cars = L.WMS.overlay('http://geodata.nationaalgeoregister.nl/wijkenbuurten2014/wms', {
+                'layers': 'cbs_buurten_2014',
+                'styles': 'wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden',
+                'format': 'image/png',
             }).addTo(map);
 
             cbs_cars.setOpacity(0.8);

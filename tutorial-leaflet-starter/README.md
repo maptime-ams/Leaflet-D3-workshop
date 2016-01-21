@@ -36,7 +36,7 @@ Maak interactieve webmaps voor al je devices. Vladimir Agafonkin maakte het en i
 	~~~~
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
 	
-	<script src=“http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 	~~~~
 	
 		
@@ -44,19 +44,19 @@ Maak interactieve webmaps voor al je devices. Vladimir Agafonkin maakte het en i
 7. plak de leafletjs bibliotheek in de body. 
 	* Vaak zie je dit ook in de head staan. Het is sneller als je het juist zo ver mogelijk onderaan doet. 
 
-8. Open een nieuw bestand. Noem bestand bijvoorbeeld ‘ main.css’  en plaats het in een nieuwe map: ‘style’ in dezelfde folder als je index.html. 
+8. Open een nieuw bestand. Noem bestand bijvoorbeeld ‘main.css’  en plaats het in een nieuwe map: ‘style’ in dezelfde folder als je index.html. 
 9. Je kunt evt. ook gelijk mappen aanmaken voor:  ‘images’  en ‘ js’. 
 10. Open je ‘index.html’ bestand en zet de link naar je css bestand in je head
 
 	~~~~
-	<link rel="stylesheet" href=“style/main.css”/>
+	<link rel="stylesheet" href=“style/main.css"/>
 	~~~~
 
 11. verander de titel in bijv. “mijn eerste kaart met leaflet”
 12. Zet een ‘div’ in de body 
 
 	~~~~
-	<div id=“map”></div>
+	<div id="map"></div>
 	~~~~
 
 13. de basis is klaar! Geef je “map” altijd een hoogte (en evt breedte). Dit doe je in de main.css
@@ -79,7 +79,7 @@ Maak interactieve webmaps voor al je devices. Vladimir Agafonkin maakte het en i
 		</head>   
 	 	<body>
 	     		<H1>voorbeeld</H1>
-				<div id=“map”></div>
+				<div id="map"></div>
 				<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script> 
 	 	</body>
 	</html>
@@ -109,8 +109,8 @@ Voor de echte kaart heb je een baselayer nodig. Dit is je ondergrond kaart. Deze
 	~~~~
 
 2. Je hebt nu een kaart gemaakt.
-	* var map =  L.map(“map” ): is het initialiseren van een “map” variabele
-	* setView() is een manier voor het centreren van de map (latitude, longitude, zoom level). de 	projectie is in googlemercator. 
+	* var map =  L.map("map"): is het initialiseren van een "map" variabele
+	* setView() is een manier voor het centreren van de map (latitude, longitude, zoom level). de projectie is in googlemercator. 
 	* Vervolgens voegden we een baselayer van tegels toe. Bijvoorbeeld van OpenStreetMap. 
 	* addTo() toevoegen van de laag aan de map
 	*
@@ -122,7 +122,6 @@ http://www.mapcoordinates.net/en
 4. Een andere gratis tegelboer is maps.stamen.com. Deze brengen zelfs drie varianten
 
 	* http://tile.stamen.com/toner/{z}/{x}/{y}.png
-	* http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg
 	* http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg
 
 
@@ -147,7 +146,7 @@ voeg handmatig markers, cirkels en polygonen toe (je eigen woonplaats bijv.). Ki
 3. Geef elke marker een popup. bij var monique maken we deze popup
 
 	~~~~
-	var popup = “schrijf hier je tekst tussen aanhalingstekens.";
+	var popup = "schrijf hier je tekst tussen aanhalingstekens.";
 	monique.bindPopup(popup); 
 	~~~~
 
@@ -173,7 +172,7 @@ voeg handmatig markers, cirkels en polygonen toe (je eigen woonplaats bijv.). Ki
 	~~~~
 
 
-6. je script ziet er als volgt uit. IkCheck ook de debugger of alles klopt… (f12, alt-cmd-i)
+6. je script ziet er als volgt uit. Check ook de debugger of alles klopt… 
 	
 	~~~~
 	<script>
@@ -202,16 +201,16 @@ voeg handmatig markers, cirkels en polygonen toe (je eigen woonplaats bijv.). Ki
 	bea.addTo(map);  
 	
 	//popup toevoegen
-	var popup = "Monique woont in Den Haag dat is 1 uur en 15 min rijden.";
+	var popup = "Monique woont in Den Haag.";
 	monique.bindPopup(popup);   
 	         
-	var popup1 = "Barbel woon in Heemstede, dat is 1 uur rijden.";
+	var popup1 = "Barbel woon in Heemstede.";
 	barbel.bindPopup(popup1)
 	
-	var popup2 = "Miranda woont in Leeuwarden, dat is 1 uur en 45 minuten rijden.";
+	var popup2 = "Miranda woont in Leeuwarden.";
 	miranda.bindPopup(popup2);   
 	
-	var popup3 = "Bea woont in Tilburg, dat is 1 uur en 10 minuten rijden.";
+	var popup3 = "Bea woont in Tilburg.";
 	bea.bindPopup(popup3);   
 	
 	 //voeg een willekeurig circle toe         
@@ -236,6 +235,7 @@ voeg handmatig markers, cirkels en polygonen toe (je eigen woonplaats bijv.). Ki
 geoJson is de standaard qua data type om webmaps mee te maken. Deze data kun je als kaartlaag toevoegen. 
 
 * Meer weten over geoJson lees je hier https://en.wikipedia.org/wiki/GeoJSON
+* ! geoJson werkt vaak alleen op een 'local webserver', meer weten check: https://github.com/mrdoob/three.js/wiki/How-to-run-things-locally
 
 1. plaats het bestand vd.geojson in de js folder
 2. plaats vd.png in je imagesfolder
