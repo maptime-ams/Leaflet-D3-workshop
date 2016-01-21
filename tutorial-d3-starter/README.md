@@ -32,7 +32,7 @@ is een open javascript bibliotheek. D3 staat voor Data Driven Documents. De data
 4. Ga naar d3js.org. Scroll naar beneden en kopieer de nieuwste release. Aangezien we al utf-8 los in de  head hebben staan, hoeft het niet meer in het script. (utf-8 zorgt ervoor dat alle dakjes en accenten goed komen te staan.)
 
 	~~~~
-	<script src=“http://d3js.org/d3.v3.min.js”></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
 	~~~~
 
 	* De js bibliotheken, zie je vaak in de head staan. Het is beter om deze zover mogelijk onderaan in de body te plaatsen. Dit scheelt namelijk snelheid bij het laden.
@@ -43,7 +43,7 @@ is een open javascript bibliotheek. D3 staat voor Data Driven Documents. De data
 Open je ‘index.html’ bestand en zet de link naar je css bestand in je head
 
 	~~~~
-	<link rel="stylesheet" href=“style/main.css”/>
+	<link rel="stylesheet" href="style/main.css"/>
 	~~~~
 
 7. verander de titel in bijv. “mijn eerste kaart met d3”. je pagina ziet er als volgt uit.
@@ -88,17 +88,6 @@ Open je ‘index.html’ bestand en zet de link naar je css bestand in je head
 						.append("svg")
 						.attr("width", w)
 						.attr("height", h);
-
-			//Load in GeoJSON data
-			d3.json("js/mapshaper_output.json", function(json) {
-				
-			//Bind data and create one path per GeoJSON feature
-			svg.selectAll("path")
-				  		.data(json.features)
-				   		.enter()
-				  	 	.append("path")
-				  	 	.attr("d", path);
-			});
 			</script>
 	~~~~
 
