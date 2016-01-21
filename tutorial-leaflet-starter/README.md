@@ -235,6 +235,7 @@ voeg handmatig markers, cirkels en polygonen toe (je eigen woonplaats bijv.). Ki
 geoJson is de standaard qua data type om webmaps mee te maken. Deze data kun je als kaartlaag toevoegen. 
 
 * Meer weten over geoJson lees je hier https://en.wikipedia.org/wiki/GeoJSON
+* ! geoJson werkt vaak alleen op een 'local webserver', meer weten check: https://github.com/mrdoob/three.js/wiki/How-to-run-things-locally
 
 1. plaats het bestand vd.geojson in de js folder
 2. plaats vd.png in je imagesfolder
